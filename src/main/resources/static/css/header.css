@@ -5,6 +5,11 @@ header {
     align-items: center;            /* los centra verticalmente entre sí */
     padding: 0 40px;                /* aire a los lados */
 }
+.menu-info{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
 
 .menu-item ul {
     display: flex;
