@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 1050">
+  <!-- Campo en vertical, escala 1px = 0.1m (68m x 105m). Solo líneas, fondo transparente -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4">
+    <!-- Líneas de banda y de fondo -->
+    <rect x="40" y="40" width="600" height="970"/>
+    <!-- Línea de medio campo -->
+    <line x1="40" y1="525" x2="640" y2="525"/>
+    <!-- Círculo central -->
+    <circle cx="340" cy="525" r="91.5"/>
+    <circle cx="340" cy="525" r="4" fill="#ffffff" fill-opacity="0.55" stroke="none"/>
+
+    <!-- Área grande y área pequeña (arriba) -->
+    <rect x="138.4" y="40" width="403.2" height="165"/>
+    <rect x="248.4" y="40" width="183.2" height="55"/>
+    <circle cx="340" cy="150" r="4" fill="#ffffff" fill-opacity="0.55" stroke="none"/>
+    <path d="M 266.9 205 A 91.5 91.5 0 0 0 413.1 205"/>
+
+    <!-- Área grande y área pequeña (abajo) -->
+    <rect x="138.4" y="845" width="403.2" height="165"/>
+    <rect x="248.4" y="955" width="183.2" height="55"/>
+    <circle cx="340" cy="900" r="4" fill="#ffffff" fill-opacity="0.55" stroke="none"/>
+    <path d="M 266.9 845 A 91.5 91.5 0 0 1 413.1 845"/>
+
+    <!-- Arcos de córner -->
+    <path d="M 40 60 A 20 20 0 0 0 60 40"/>
+    <path d="M 620 40 A 20 20 0 0 0 640 60"/>
+    <path d="M 640 990 A 20 20 0 0 0 620 1010"/>
+    <path d="M 60 1010 A 20 20 0 0 0 40 990"/>
+  </g>
+</svg>

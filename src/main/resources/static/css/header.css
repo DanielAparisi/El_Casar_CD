@@ -5,6 +5,7 @@ header {
     align-items: center;            /* los centra verticalmente entre sí */
     padding: 0 40px;                /* aire a los lados */
 }
+
 .menu-info{
     display: flex;
     justify-content: space-between;
@@ -29,8 +30,8 @@ header {
 }
 
 .menu-item a:hover {
-    color: #089544;                    /* el verde del club */
-    border-bottom: 3px solid #089544;  /* subrayado grueso tipo pestaña */
+    color: var(--verde-club);
+    border-bottom: 3px solid var(--verde-club);  /* subrayado grueso tipo pestaña */
 }
 
 .menu-item a {

@@ -1,0 +1,126 @@
+/* NIVEL 1: la sección reparte sus dos hijos (texto y panel verde) */
+.main-section{
+    display: flex;               /* flex-direction: row es el valor por defecto */
+    align-items: stretch;        /* las dos columnas miden lo mismo de alto */
+    min-height: calc(100dvh - 140px); /* pantalla completa menos el header */
+    border-top: 4px solid #191b13;
+    margin: 0 40px;
+}
+
+/* NIVEL 2 (izquierda): columna que apila y centra su contenido */
+.info-present{
+    width: 50%;
+    display: flex;
+    flex-direction: column;      /* el eje principal pasa a ser el vertical */
+    justify-content: center;     /* centra el bloque de texto en ese eje */
+    gap: 24px;
+    padding: 40px 0;
+}
+
+/* los títulos y párrafos traen margen de serie del navegador;
+   lo anulamos para que la única separación sea el gap del flex */
+.info-present h1,
+.info-present p{
+    margin: 0;
+}
+
+.info-present h1{
+    font-size: clamp(44px, 5.5vw, 76px); /* crece con la pantalla, con tope */
+    line-height: 1.05;           /* en titulares grandes, líneas muy juntas */
+    font-weight: 400;            /* las serif de display no se ponen en negrita */
+    color: #191b13;
+}
+
+.info-present p{
+    font-size: 18px;
+    line-height: 1.7;
+    color: #3f463c;
+    max-width: 55ch;             /* corta la línea a un ancho cómodo de leer */
+}
+
+/* NIVEL 2 (derecha): el campo también es flex para centrar escudo + frase */
+.present{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 98px;
+    padding: 32px;
+    color: white;
+    text-align: center;
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 24px;
+}
+.present span{
+    font-size: 42px;
+    text-wrap: prety;
+}
+
+/* el escudo es transparente donde no hay dibujo: le pintamos
+   una insignia blanca detrás para que no se transparente el campo */
+.present img{
+    width: 120px;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.acciones{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 16px;
+}
+
+.acciones button{
+    font: inherit;               /* los button NO heredan la fuente: hay que pedirlo */
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: white;
+    background: var(--verde-club);
+    border: none;                /* fuera el borde 3D por defecto */
+    border-radius: 999px;        /* radio gigante = extremos en píldora */
+    padding: 20px 36px;
+    cursor: pointer;
+}
+
+.acciones a{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #191b13;
+    text-decoration: none;       /* quitamos el subrayado azul por defecto... */
+    border-bottom: 2px solid #191b13; /* ...y lo redibujamos con aire debajo */
+    padding-bottom: 6px;
+}
+
+.eyebrow{
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--verde-club);
+}
+
+.cursiva{
+    font-style: italic;
+    color: var(--verde-club);
+}
+
+.hero-campo {
+    background:
+        url('/imgs/lineas-campo.svg') center / cover no-repeat,
+        repeating-linear-gradient(0deg,
+            var(--verde-club) 0 60px,
+            var(--verde-club-claro) 60px 120px);
+}
+
+.acciones a:hover {
+    color: var(--verde-club);
+    border-bottom: 3px solid var(--verde-club);  /* subrayado grueso tipo pestaña */
+}
+
