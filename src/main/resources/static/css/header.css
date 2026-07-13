@@ -1,0 +1,37 @@
+/* NIVEL 1: el header reparte sus dos hijos (logo/info y menú) */
+header {
+    display: flex;
+    justify-content: space-between; /* info a la izquierda, menú a la derecha */
+    align-items: center;            /* los centra verticalmente entre sí */
+    padding: 0 40px;                /* aire a los lados */
+}
+
+.menu-item ul {
+    display: flex;
+    gap: 32px;          /* separación entre opciones — mejor que margins */
+    list-style: none;
+    margin: 0;
+    padding: 0;       
+}
+.menu-item a {
+    display: block;              /* que respete el padding en todas direcciones */
+    padding: 10px 6px;
+    color: #191b13;
+    text-decoration: none;
+    font-weight: 600;            /* los menús suelen ir en semi-negrita */
+    font-size: 14px;
+    letter-spacing: 0.5px;       /* un poco de aire entre letras, típico en mayúsculas */
+}
+
+.menu-item a:hover {
+    color: #089544;                    /* el verde del club */
+    border-bottom: 3px solid #089544;  /* subrayado grueso tipo pestaña */
+}
+
+.menu-item a {
+    border-bottom: 3px solid transparent; /* reserva el hueco para que no "salte" */
+    transition: color 0.2s, border-color 0.2s;
+}
+
+ 
+
