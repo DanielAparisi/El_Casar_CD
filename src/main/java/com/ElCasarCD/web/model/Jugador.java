@@ -1,11 +1,26 @@
 package com.ElCasarCD.web.model;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
+@Entity
 public class Jugador {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private String nombre;
     private String apellido;
     private int edad;
     private String posicion;
     private int dorsal;
+
+    public void jugador(String nombre, String apellido, int edad, String posicion, int dorsal){
+        
+    }
 
     public Jugador(String nombre, String apellido, int edad, String posicion, int dorsal) {
         this.nombre = nombre;
@@ -32,10 +47,10 @@ public class Jugador {
     }
 
     public void setNombre(String nombre){
-            this.nombre = nombre;
+        this.nombre = nombre;
     }
     public void setApellido(String apellido){
-         this.apellido = apellido;
+        this.apellido = apellido;
     }
     public void setEdad(int edad){
        this.edad = edad;
